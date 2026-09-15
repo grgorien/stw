@@ -1,11 +1,11 @@
-<img src="data/tiktok.svg" alt="tiktok logo" width="50" height="50">
+<img src="data/stw.svg" alt="stw logo" width="50" height="50">
 
-# TikTok
+# stw (Stopwatch) 
 
 Minimal GTK4 stopwatch for XFCE and other Linux desktops.  
 Tracks time with centisecond precision. Lives in your taskbar, stays out of your way.
 
-<img src="data/gtk-box.png" alt="tiktok visual preview screenshot" width="250">
+<img src="data/gtk-box.png" alt="stw visual preview screenshot" width="250">
 
 ## Keybinds
 
@@ -21,17 +21,17 @@ Tracks time with centisecond precision. Lives in your taskbar, stays out of your
 Download the latest tarball from the [Releases](../../releases/latest) page.
 
 ```bash
-tar -xzf tiktok-*-linux-x86_64.tar.gz
-cd tiktok-*-linux-x86_64
+tar -xzf stw-*-linux-x86_64.tar.gz
+cd stw-*-linux-x86_64
 sudo ./install.sh
 ```
 
 To remove it:
 
 ```bash
-sudo rm /usr/local/bin/tiktok
-sudo rm /usr/local/share/applications/tiktok.desktop
-sudo rm /usr/local/share/icons/hicolor/scalable/apps/tiktok.svg
+sudo rm /usr/local/bin/stw
+sudo rm /usr/local/share/applications/stw.desktop
+sudo rm /usr/local/share/icons/hicolor/scalable/apps/stw.svg
 ```
 
 ---
@@ -61,8 +61,8 @@ sudo pacman -S base-devel pkg-config gtk4
 ### Build and install
 
 ```bash
-git clone https://github.com/grgorien/tiktok
-cd tiktok
+git clone https://github.com/grgorien/stw
+cd stw 
 make release
 sudo make install
 ```
@@ -70,7 +70,7 @@ sudo make install
 Verify it worked:
 
 ```bash
-tiktok --version
+stw --version
 ```
 
 ### Uninstall
@@ -84,9 +84,9 @@ sudo make uninstall
 ## Development
 
 ```bash
-make          # debug build with -g -O0 (runs as ./tiktok)
+make          # debug build with -g -O0 (runs as ./stw)
 make debug    # same as above, explicit
-make release  # optimised build with -O2 (runs as ./tiktok)
+make release  # optimised build with -O2 (runs as ./stw)
 make clean    # remove build artefacts
 ```
 
