@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=stw
+GenericName=Stopwatch
+Comment=Stupid simple GTK4 stopwatch
+Exec=stw
+Icon=stw
+Terminal=false
+Categories=Utility;GTK;
+Keywords=stopwatch;timer;time;clock;
+StartupNotify=true
