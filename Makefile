@@ -1,5 +1,5 @@
 CC = gcc
-APP = tiktok
+APP = stw
 # git tag as source 
 VERSION := $(shell git describe --tags --abbrev=0 2>/dev/null | sed 's/^v//' || echo "dev")
 PREFIX ?= /usr/local

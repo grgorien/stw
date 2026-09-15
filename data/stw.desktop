@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
-Name=TikTok
+Name=stw
 GenericName=Stopwatch
 Comment=Stupid simple GTK4 stopwatch
-Exec=tiktok
-Icon=tiktok
+Exec=stw
+Icon=stw
 Terminal=false
 Categories=Utility;GTK;
 Keywords=stopwatch;timer;time;clock;

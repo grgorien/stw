@@ -145,7 +145,7 @@ static void on_activate(GtkApplication *gapp, gpointer user_data) {
   load_css();
 
   GtkWidget *window = gtk_application_window_new(gapp);
-  gtk_window_set_title(GTK_WINDOW(window), "Stopwatch");
+  gtk_window_set_title(GTK_WINDOW(window), "stw");
   gtk_window_set_default_size(GTK_WINDOW(window), 250, 120);
   gtk_window_set_resizable(GTK_WINDOW(window), FALSE);
 
@@ -183,7 +183,7 @@ static void on_activate(GtkApplication *gapp, gpointer user_data) {
 
 int main(int argc, char **argv) {
   if (argc > 1 && strcmp(argv[1], "--version") == 0) {
-    printf("tiktok %s\n", APP_VERSION);
+    printf("stw %s\n", APP_VERSION);
     return 0;
   }
   // change name to general, make kanam job
@@ -195,7 +195,7 @@ int main(int argc, char **argv) {
                      .is_running = FALSE};
 
   GtkApplication *app =
-      gtk_application_new("com.tiktok.stopwatch", G_APPLICATION_DEFAULT_FLAGS);
+      gtk_application_new("com.stw.stopwatch", G_APPLICATION_DEFAULT_FLAGS);
   g_signal_connect(app, "activate", G_CALLBACK(on_activate), &app_data);
 
   int status = g_application_run(G_APPLICATION(app), argc, argv);
