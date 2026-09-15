@@ -1,4 +1,4 @@
-name: Tiktok Release Steps
+name: stw Release Steps
 
 on:
   push:
@@ -31,11 +31,11 @@ jobs:
 
       - name: Package up
         run: |
-          PKGDIR=tiktok-${{ steps.version.outputs.ver }}-linux-x86_64
+          PKGDIR=stw-${{ steps.version.outputs.ver }}-linux-x86_64
           mkdir -p "$PKGDIR"
-          cp tiktok "$PKGDIR/"
-          cp data/tiktok.desktop "$PKGDIR/"
-          cp data/tiktok.svg "$PKGDIR/"
+          cp stw "$PKGDIR/"
+          cp data/stw.desktop "$PKGDIR/"
+          cp data/stw.svg "$PKGDIR/"
 
           # install script for non-developer users
           cat > "$PKGDIR/install.sh" << 'EOF'
@@ -44,10 +44,10 @@ jobs:
           BINDIR="${PREFIX:-/usr/local}/bin"
           APPDIR="${PREFIX:-/usr/local}/share/applications"
           ICONDIR="${PREFIX:-/usr/local}/share/icons/hicolor/scalable/apps"
-          install -Dm755 tiktok            "$BINDIR/tiktok"
-          install -Dm644 tiktok.desktop    "$APPDIR/tiktok.desktop"
-          install -Dm644 tiktok.svg        "$ICONDIR/tiktok.svg"
-          echo "status: installed.\n Run 'tiktok' or find it in your app menu."
+          install -Dm755 stw            "$BINDIR/stw"
+          install -Dm644 stw.desktop    "$APPDIR/stw.desktop"
+          install -Dm644 stw.svg        "$ICONDIR/stw.svg"
+          echo "status: installed.\n Run 'stw' or find it in your app menu."
           EOF
           chmod +x "$PKGDIR/install.sh"
 
@@ -56,6 +56,6 @@ jobs:
       - name: Release create and tarball attach
         uses: ncipollo/release-action@v1
         with:
-          name: "tiktok ${{ steps.version.outputs.ver }}"
+          name: "stw ${{ steps.version.outputs.ver }}"
           generate_release_notes: true
-          files: tiktok-${{ steps.version.outputs.ver }}-linux-x86_64.tar.gz
+          files: stw-${{ steps.version.outputs.ver }}-linux-x86_64.tar.gz
